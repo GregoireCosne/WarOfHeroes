@@ -1,0 +1,22 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth; /* Activer le défilement fluide */
+}
+
+.container {
+    height: 100vh; /* Pleine hauteur de la fenêtre visible */
+    overflow-y: scroll; /* Activation du défilement vertical */
+    scroll-snap-type: y mandatory; /* Défilement par ancrage vertical */
+}
+
+.section {
+    height: 100vh; /* Chaque section occupe toute la hauteur de la fenêtre visible */
+    scroll-snap-align: start; /* Alignement des sections au début */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #f0f0f0;
+}
