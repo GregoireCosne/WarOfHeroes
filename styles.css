@@ -128,6 +128,14 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centrer le cercle central */
+    border: 4px solid goldenrod; /* Ajout de la bordure dorée */
+    background-size: 250%; /* Ajuste la taille de l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image à l'intérieur du cercle */
+}
+
+#cercle-central {
+    background-image: url('trone-fer-marc-uai-600x337.jpg'); /* Chemin vers votre image */
 }
 
 .cercles {
@@ -144,6 +152,48 @@ h1 {
     left: 50%;
     cursor: pointer;
     transform-origin: center; /* Définir l'origine de la transformation au centre du cercle */
+    border: 4px solid silver; /* Ajout de la bordure argentée */
+    background-size: 170%; /* Ajuste la taille de l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image à l'intérieur du cercle */
+}
+
+
+
+#cercle1 {
+    background-image: url('Blason-arryn-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle2 {
+    background-image: url('Blason-baratheon-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle3 {
+    background-image: url('Blason-greyjoy-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle4 {
+    background-image: url('Blason-lannister-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle5 {
+    background-image: url('Blason-martell-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle6 {
+    background-image: url('Blason-stark-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle7 {
+    background-image: url('Blason-targaryen-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle8 {
+    background-image: url('Blason-tully-2014-v01-256px.png'); /* Chemin vers votre image */
+}
+
+#cercle9 {
+    background-image: url('Blason-tyrell-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 .cercle:nth-child(1) { transform: rotate(40deg) translate(230px) rotate(-40deg) translate(-50%, -50%); }
@@ -205,3 +255,45 @@ h1 {
     top: calc(100% - 550px); /* Position en dessous des blocs haut */
 }
 
+
+.bloc-gauche {
+    margin-left: 50px;
+    width: 800px; /* Ajustez la largeur du bloc gauche selon vos préférences */
+    height: 600px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.colonnes {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 500px; /* Ajustez la largeur du bloc gauche selon vos préférences */
+    height: 600px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
+    background-color: #000000;
+    border-radius: 20px;
+}
+
+.bloc-haut{
+    width: 500px; /* Ajustez la largeur du bloc gauche selon vos préférences */
+    height: 350px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
+    background-color: #333;
+    border-radius: 20px;
+
+}
+
+.bloc-bas {
+    margin-top: 50px;
+    width: 500px; /* Ajustez la largeur du bloc gauche selon vos préférences */
+    height: 200px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
+    background-color: #333;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bloc-bas img {
+    width: 100%; /* Pour que l'image remplisse le bloc horizontalement */
+    height: 100%; /* Pour que l'image remplisse le bloc verticalement */
+    object-fit: cover; /* Pour ajuster la taille de l'image tout en conservant les proportions et en remplissant le conteneur */
+    border-radius: inherit; /* Héritage des bordures arrondies du bloc */
+}
