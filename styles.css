@@ -224,6 +224,52 @@ h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer; /* Ajout du curseur pointer pour indiquer que le bloc est cliquable */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image à l'intérieur du cercle */
+}
+
+
+#bloc1 {
+    background-size: 170%; /* Ajuste la taille de l'image */
+    background-image: url('Jon_Snow.webp'); /* Chemin vers votre image */
+}
+
+#bloc2 {
+    background-size: 170%; /* Ajuste la taille de l'image */
+    background-image: url('Cersei_Lannister.webp'); /* Chemin vers votre image */
+}
+
+#bloc3 {
+    background-size: 170%; /* Ajuste la taille de l'image */
+    background-image: url('Tyrion_Lannister.webp'); /* Chemin vers votre image */
+}
+
+#bloc4 {
+    background-size: 170%; /* Ajuste la taille de l'image */
+    background-image: url('Daenerys_Season_8.webp'); /* Chemin vers votre image */
+}
+
+#bloc5 {
+    background-size: 170%; /* Ajuste la taille de l'image */
+    background-image: url('s-l1200.jpg'); /* Chemin vers votre image */
+}
+
+.bloc::before,
+.bloc::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0), black); /* Dégradé noir vers transparent */
+    top: 0;
+    z-index: 1; /* Placez les pseudo-éléments au-dessus de l'image */
+}
+
+.bloc::before {
+    left: 0;
+}
+
+.bloc::after {
+    right: 0;
 }
 
 .bloc:last-child {
@@ -242,13 +288,14 @@ h1 {
     position: absolute;
     width: 205px; /* Ajustez la taille du petit bloc selon vos préférences */
     height: 100px;
-    background-color: #555; /* Couleur du petit bloc */
     border-radius: 20px; /* Bordures arrondies */
-}
-
-/* Positionnement des petits blocs */
-.petit-bloc {
     top: 450px; /* Position au-dessus des blocs bas */
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Poids de la police */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
 }
 
 .bas .petit-bloc {
@@ -262,6 +309,12 @@ h1 {
     height: 600px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
     background-color: #333;
     border-radius: 20px;
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Poids de la police */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .colonnes {
@@ -278,7 +331,12 @@ h1 {
     height: 350px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
     background-color: #333;
     border-radius: 20px;
-
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Poids de la police */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .bloc-bas {
