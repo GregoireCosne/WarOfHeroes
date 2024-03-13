@@ -20,8 +20,43 @@ body, html {
     align-items: center;
     background-color: black; /* Fond noir */
     position: relative; /* Position relative pour superposer le texte */
+    overflow-y: auto;
 }
 
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 100%;
+}
+
+/* Masquer la barre de défilement horizontale */
+#horizontal-scroll-container {
+    overflow-x: hidden;
+}
+
+
+.horizontal-scroll-section {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.center-container {
+    position: absolute;
+    width: 80%; /* Ajout de la largeur */
+    max-width: 200px; /* Limite la largeur maximale du menu */
+    margin: 0 auto; /* Centre le menu horizontalement */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; /* Fond du menu blanc avec opacité */
+    border-radius: 20px; /* Bords arrondis */
+    padding: 20px; /* Espacement intérieur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .menu {
     position: absolute;
     width: 80%; /* Ajout de la largeur */
@@ -55,6 +90,48 @@ body, html {
 .menu button:hover {
     background-color: #555; /* Couleur de fond des boutons au survol */
 }
+
+.connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-connexion {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+
+
+/*FIN SECTION 2*/
+
+
 
 .gif-section {
     position: relative;
@@ -206,19 +283,25 @@ h1 {
 .cercle:nth-child(8) { transform: rotate(320deg) translate(230px) rotate(-320deg) translate(-50%, -50%); }
 .cercle:nth-child(9) { transform: rotate(360deg) translate(230px) rotate(-360deg) translate(-50%, -50%); }
 
+
+/*FIN SECTION 4*/
+
 .blocs {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    width: 80%; /* Largeur des blocs */
+    align-items: center;
+    margin-top: 125px;
+    margin-left: 150px; /* Centre la div horizontalement */
+    margin-right: 150px; /* Centre la div horizontalement */
 }
+
 
 .bloc {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 200px;
+    height: 400px;
     background-color: #333;
-    margin-right: 50px;
+    margin-right: 20px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -277,19 +360,20 @@ h1 {
 }
 
 .haut {
-    margin-top: -50px;
+    margin-top: -100px;
 }
 
 .bas {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .petit-bloc {
+
     position: absolute;
-    width: 205px; /* Ajustez la taille du petit bloc selon vos préférences */
+    width: 100%; /* Ajustez la taille du petit bloc selon vos préférences */
     height: 100px;
     border-radius: 20px; /* Bordures arrondies */
-    top: 450px; /* Position au-dessus des blocs bas */
+    top: 400px; /* Position au-dessus des blocs bas */
     font-size: 18px; /* Taille du texte */
     font-weight: bold; /* Poids de la police */
     display: flex;
@@ -299,8 +383,54 @@ h1 {
 }
 
 .bas .petit-bloc {
-    top: calc(100% - 550px); /* Position en dessous des blocs haut */
+    top: calc(100% - 500px); /* Position en dessous des blocs haut */
 }
+
+
+.colonnes-personnage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 40px); /* Largeur de l'écran moins l'espacement */
+    margin: 0 20px; /* Espacement des bords de l'écran */
+    height: 75vh; /* 80% de la hauteur de l'écran */
+}
+
+
+.bloc-personnage-gauche,
+.bloc-personnage-droit {
+    background-color: #333;
+    width: 45%; /* Largeur équitable pour les deux blocs */
+    height: 100%; /* Prend toute la hauteur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    border-radius: 20px;
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Poids de la police */
+
+}
+
+.bloc-personnage-gauche {
+    background-color: #333;
+    margin-right: 5%; /* Espace entre les deux blocs */
+}
+
+.bloc-personnage-bas {
+    margin-top: 50px;
+    width: 100%; /* Prend toute la largeur */
+    height: 20vh; /* 20% de la hauteur de l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
 
 
 .bloc-gauche {
