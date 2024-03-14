@@ -4,8 +4,7 @@ function scrollToFirstSection() {
 }
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     scrollToHorizontalSnap(0); // Appel de la fonction avec l'index du premier snap
 });
 
@@ -13,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', scrollToFirstSection);
 
 // Écouteur d'événements pour détecter le changement d'état de l'historique de navigation (retour en arrière)
-window.addEventListener('popstate', function(event) {
+window.addEventListener('popstate', function (event) {
     // Vérifiez si l'URL actuelle est ancrée à la première section
     if (window.location.hash !== '#section1') {
         // Si ce n'est pas le cas, définissez l'ancre de l'URL sur la première section
@@ -39,10 +38,16 @@ function navigateToSectionOrExternalLink(target) {
         if (target === 'section5') {
             const snap1 = document.getElementById('snap1');
             if (snap1) {
-                snap1.scrollIntoView({ behavior: 'smooth' });
+                snap1.scrollIntoView({behavior: 'smooth'});
+            }
+        }
+        if (target === 'section4') {
+            const snap8 = document.getElementById('snap8');
+            if (snap8) {
+                snap8.scrollIntoView({behavior: 'smooth'});
             }
         } else {
-            section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({behavior: 'smooth'});
         }
     } else {
         // Si le lien est externe, redirige vers l'URL spécifiée
@@ -63,12 +68,10 @@ blocs.forEach(bloc => {
 });
 
 
-
-
 // Fonction pour gérer le déplacement horizontal vers les snaps
 function scrollToHorizontalSnap(targetIndex) {
     const container = document.getElementById("horizontal-scroll-container");
-    container.scrollTo({ left: targetIndex * container.offsetWidth, behavior: "smooth" });
+    container.scrollTo({left: targetIndex * container.offsetWidth, behavior: "smooth"});
 
     // Affiche ou masque le menu et la section de connexion en fonction de la snap horizontale actuelle
     const menuSection = document.querySelector('.menu-section');
@@ -88,38 +91,126 @@ document.getElementById('button7').addEventListener('click', () => {
 });
 
 
+// Fonction pour cacher le menu radial
+function hideMenuRadial() {
+    const menuRadial = document.querySelector('.menu-radial');
+    menuRadial.style.display = 'none';
+}
+
+// Fonction pour afficher le menu radial
+function showMenuRadial() {
+    const menuRadial = document.querySelector('.menu-radial');
+    menuRadial.style.display = 'block';
+}
+
+// Écouteurs d'événements pour les cercles
+document.getElementById('cercle1').addEventListener('click', () => {
+    hideMenuRadial(); // Cacher le menu radial lorsqu'un cercle est cliqué
+    goToSnap2('9'); // Aller à la snap correspondante
+});
+document.getElementById('cercle2').addEventListener('click', () => {
+    hideMenuRadial(); // Cacher le menu radial lorsqu'un cercle est cliqué
+    goToSnap2('10'); // Aller à la snap correspondante
+});
+document.getElementById('cercle3').addEventListener('click', () => {
+    hideMenuRadial();
+    goToSnap2('11');
+});
+document.getElementById('cercle4').addEventListener('click', () => {
+    hideMenuRadial();
+    goToSnap2('12');
+});
+document.getElementById('cercle5').addEventListener('click', () => {
+    hideMenuRadial();
+    goToSnap2('13');
+});
+document.getElementById('cercle6').addEventListener('click', () => {
+    hideMenuRadial();
+    goToSnap2('14');
+});
+document.getElementById('cercle7').addEventListener('click', () => {
+    hideMenuRadial();
+    goToSnap2('15');
+});
+document.getElementById('cercle8').addEventListener('click', () => {
+    hideMenuRadial();
+    goToSnap2('16');
+});
+document.getElementById('cercle9').addEventListener('click', () => {
+    hideMenuRadial();
+    goToSnap2('17');
+});
+// Écouteurs d'événements pour les boutons "Retour"
+document.getElementById('button13').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button14').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button15').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button16').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button17').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button18').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button19').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button20').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
+document.getElementById('button21').addEventListener('click', () => {
+    showMenuRadial();
+    goToSnap2('8');
+});
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Fonction pour déplacer vers la première snap horizontale
 
 
     // Écouteurs d'événements pour les boutons "Retour"
-    document.getElementById('button8').addEventListener('click',() => goToSnap('1'));
-    document.getElementById('button9').addEventListener('click',() => goToSnap('1'));
-    document.getElementById('button10').addEventListener('click',() => goToSnap('1'));
-    document.getElementById('button11').addEventListener('click',() => goToSnap('1'));
-    document.getElementById('button12').addEventListener('click',() => goToSnap('1'));
-    document.getElementById('button13').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button14').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button15').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button16').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button17').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button18').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button19').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button20').addEventListener('click',() => goToSnap2('8'));
-    document.getElementById('button21').addEventListener('click',() => goToSnap2('8'));
+    document.getElementById('button8').addEventListener('click', () => goToSnap('1'));
+    document.getElementById('button9').addEventListener('click', () => goToSnap('1'));
+    document.getElementById('button10').addEventListener('click', () => goToSnap('1'));
+    document.getElementById('button11').addEventListener('click', () => goToSnap('1'));
+    document.getElementById('button12').addEventListener('click', () => goToSnap('1'));
+    document.getElementById('button13').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button14').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button15').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button16').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button17').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button18').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button19').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button20').addEventListener('click', () => goToSnap2('8'));
+    document.getElementById('button21').addEventListener('click', () => goToSnap2('8'));
 
     function goToSnap(snapNumber) {
         let snapElement = document.getElementById('snap' + snapNumber);
         let container = document.getElementById('horizontal-scroll-container3');
         container.scrollLeft = snapElement.offsetLeft;
     }
+
     function goToSnap2(snapNumber) {
         let snapElement = document.getElementById('snap' + snapNumber);
         let container = document.getElementById('horizontal-scroll-container4');
         container.scrollLeft = snapElement.offsetLeft;
     }
+
 
 // Écouteurs d'événements pour les blocs
     document.getElementById('bloc1').addEventListener('click', () => goToSnap('3'));
@@ -144,8 +235,8 @@ function disableScrollOnSnaps() {
     const snaps = document.querySelectorAll('#snap3, #snap4, #snap5, #snap6, #snap7');
 
     // Ajoute un écouteur d'événements pour chaque snap
-    snaps.forEach(function(snap) {
-        snap.addEventListener('wheel', function(e) {
+    snaps.forEach(function (snap) {
+        snap.addEventListener('wheel', function (e) {
             e.preventDefault(); // Empêche le défilement vertical
         });
     });
@@ -156,16 +247,22 @@ function disableScrollOnSnaps2() {
     const snaps = document.querySelectorAll('#snap9, #snap10, #snap11, #snap12, #snap13, #snap14, #snap15, #snap16, #snap17');
 
     // Ajoute un écouteur d'événements pour chaque snap
-    snaps.forEach(function(snap) {
-        snap.addEventListener('wheel', function(e) {
+    snaps.forEach(function (snap) {
+        snap.addEventListener('wheel', function (e) {
             e.preventDefault(); // Empêche le défilement vertical
         });
     });
 }
 
 
-// Appelle la fonction lors du chargement du DOM
-document.addEventListener('DOMContentLoaded', disableScrollOnSnaps);
-// Appelle la fonction lors du chargement du DOM
-document.addEventListener('DOMContentLoaded', disableScrollOnSnaps2);
+document.addEventListener('DOMContentLoaded', function () {
+    // Appelle la fonction pour désactiver le défilement vertical sur les snaps 3 à 7
+    disableScrollOnSnaps();
+
+    // Appelle la fonction pour désactiver le défilement vertical sur les snaps 9 à 17
+    disableScrollOnSnaps2();
+});
+
+
+
 
