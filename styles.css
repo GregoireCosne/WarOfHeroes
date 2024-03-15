@@ -25,7 +25,7 @@ body, html {
 
 .horizontal-scroll-container {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     width: 100%;
     height: 100%;
@@ -40,6 +40,14 @@ body, html {
 .horizontal-scroll-section {
     flex: 0 0 100%;
     scroll-snap-align: start;
+    overflow-x: hidden;
+}
+.horizontal-scroll-section {
+    background-color: black; /* Fond noir par défaut */
+}
+
+#snap18.horizontal-scroll-section {
+    background-color: transparent; /* Fond transparent pour la snap 18 */
 }
 
 .center-container {
@@ -146,9 +154,61 @@ button:hover {
     margin-top: 5vh; /* Marge de 10% en haut */
     left: 40%; /* Place l'image au centre horizontalement */
     margin-bottom: 5vh; /* Marge de 10% en bas */
-    transition: transform 0.3s ease; /* Animation de transition lors du zoom */
-    overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+}
 
+.circle {
+    cursor: pointer;
+    position: absolute;
+    width: 40px; /* Taille du cercle */
+    height: 40px; /* Taille du cercle */
+    border-radius: 50%; /* Rend le cercle rond */
+    z-index: 3;
+}
+
+/* Dorne */
+.circle1 {
+    top: 83.5%; /* Position verticale du cercle */
+    left: 55.5%; /* Position horizontale du cercle */
+}
+/* Conflans */
+.circle2 {
+    top: 49.5%; /* Position verticale du cercle */
+    left: 48%; /* Position horizontale du cercle */
+}
+/* Greyjoy */
+.circle3 {
+    top: 48%; /* Position verticale du cercle */
+    left: 43%; /* Position horizontale du cercle */
+}
+/* Lannister */
+.circle4 {
+    top: 62%; /* Position verticale du cercle */
+    left: 43.5%; /* Position horizontale du cercle */
+}
+/* Targaryen */
+.circle5 {
+    top: 63%; /* Position verticale du cercle */
+    left: 52%; /* Position horizontale du cercle */
+}
+/* Baratheon */
+.circle6 {
+    top: 71%; /* Position verticale du cercle */
+    left: 53.7%; /* Position horizontale du cercle */
+}
+/* Stark */
+.circle7 {
+    top: 23%; /* Position verticale du cercle */
+    left: 49.3%; /* Position horizontale du cercle */
+}
+/* Position des cercles */
+.circle8 {
+    top: 46.5%; /* Position verticale du cercle */
+    left: 53.7%; /* Position horizontale du cercle */
+}
+/* Position des cercles */
+.circle9 {
+    top: 71%; /* Position verticale du cercle */
+    left: 45%; /* Position horizontale du cercle */
 }
 
 
@@ -174,6 +234,37 @@ button:hover {
     height: 100%;
     object-fit: cover;
     z-index: 1;
+}
+
+#snap19{
+    z-index: 3;
+}
+#snap20{
+    z-index: 3;
+}
+#snap21{
+    z-index: 3;
+}
+#snap22{
+    z-index: 3;
+}
+#snap23{
+    z-index: 3;
+}
+#snap24{
+    z-index: 3;
+}
+#snap24{
+    z-index: 3;
+}
+#snap25{
+    z-index: 3;
+}
+#snap26{
+    z-index: 3;
+}
+#snap27{
+    z-index: 3;
 }
 
 .content {

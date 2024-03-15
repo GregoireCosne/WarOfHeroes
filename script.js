@@ -46,7 +46,14 @@ function navigateToSectionOrExternalLink(target) {
             if (snap8) {
                 snap8.scrollIntoView({behavior: 'smooth'});
             }
-        } else {
+        }
+        if (target === 'section3') {
+            const snap18 = document.getElementById('snap18');
+            if (snap18) {
+                snap18.scrollIntoView({behavior: 'smooth'});
+            }
+        }
+        else {
             section.scrollIntoView({behavior: 'smooth'});
         }
     } else {
@@ -103,80 +110,6 @@ function showMenuRadial() {
     menuRadial.style.display = 'block';
 }
 
-// Écouteurs d'événements pour les cercles
-document.getElementById('cercle1').addEventListener('click', () => {
-    hideMenuRadial(); // Cacher le menu radial lorsqu'un cercle est cliqué
-    goToSnap2('9'); // Aller à la snap correspondante
-});
-document.getElementById('cercle2').addEventListener('click', () => {
-    hideMenuRadial(); // Cacher le menu radial lorsqu'un cercle est cliqué
-    goToSnap2('10'); // Aller à la snap correspondante
-});
-document.getElementById('cercle3').addEventListener('click', () => {
-    hideMenuRadial();
-    goToSnap2('11');
-});
-document.getElementById('cercle4').addEventListener('click', () => {
-    hideMenuRadial();
-    goToSnap2('12');
-});
-document.getElementById('cercle5').addEventListener('click', () => {
-    hideMenuRadial();
-    goToSnap2('13');
-});
-document.getElementById('cercle6').addEventListener('click', () => {
-    hideMenuRadial();
-    goToSnap2('14');
-});
-document.getElementById('cercle7').addEventListener('click', () => {
-    hideMenuRadial();
-    goToSnap2('15');
-});
-document.getElementById('cercle8').addEventListener('click', () => {
-    hideMenuRadial();
-    goToSnap2('16');
-});
-document.getElementById('cercle9').addEventListener('click', () => {
-    hideMenuRadial();
-    goToSnap2('17');
-});
-// Écouteurs d'événements pour les boutons "Retour"
-document.getElementById('button13').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button14').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button15').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button16').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button17').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button18').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button19').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button20').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
-document.getElementById('button21').addEventListener('click', () => {
-    showMenuRadial();
-    goToSnap2('8');
-});
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -211,6 +144,12 @@ document.addEventListener('DOMContentLoaded', function () {
         container.scrollLeft = snapElement.offsetLeft;
     }
 
+    function goToSnap3(snapNumber) {
+        let snapElement = document.getElementById('snap' + snapNumber);
+        let container = document.getElementById('horizontal-scroll-container2');
+        container.scrollLeft = snapElement.offsetLeft;
+    }
+
 
 // Écouteurs d'événements pour les blocs
     document.getElementById('bloc1').addEventListener('click', () => goToSnap('3'));
@@ -227,7 +166,147 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('cercle7').addEventListener('click', () => goToSnap2('15'));
     document.getElementById('cercle8').addEventListener('click', () => goToSnap2('16'));
     document.getElementById('cercle9').addEventListener('click', () => goToSnap2('17'));
+
+    // Écouteurs d'événements pour les cercles
+    document.getElementById('circle1').addEventListener('click', () => goToSnap3('23'));
+    document.getElementById('circle2').addEventListener('click', () => goToSnap3('26'));
+    document.getElementById('circle3').addEventListener('click', () => goToSnap3('21'));
+    document.getElementById('circle4').addEventListener('click', () => goToSnap3('22'));
+    document.getElementById('circle5').addEventListener('click', () => goToSnap3('25'));
+    document.getElementById('circle6').addEventListener('click', () => goToSnap3('20'));
+    document.getElementById('circle7').addEventListener('click', () => goToSnap3('24'));
+    document.getElementById('circle8').addEventListener('click', () => goToSnap3('19'));
+    document.getElementById('circle9').addEventListener('click', () => goToSnap3('27'));
+
+    // Écouteurs d'événements pour les cercles
+    document.getElementById('cercle1').addEventListener('click', () => {
+        hideMenuRadial(); // Cacher le menu radial lorsqu'un cercle est cliqué
+        goToSnap2('9'); // Aller à la snap correspondante
+    });
+    document.getElementById('cercle2').addEventListener('click', () => {
+        hideMenuRadial(); // Cacher le menu radial lorsqu'un cercle est cliqué
+        goToSnap2('10'); // Aller à la snap correspondante
+    });
+    document.getElementById('cercle3').addEventListener('click', () => {
+        hideMenuRadial();
+        goToSnap2('11');
+    });
+    document.getElementById('cercle4').addEventListener('click', () => {
+        hideMenuRadial();
+        goToSnap2('12');
+    });
+    document.getElementById('cercle5').addEventListener('click', () => {
+        hideMenuRadial();
+        goToSnap2('13');
+    });
+    document.getElementById('cercle6').addEventListener('click', () => {
+        hideMenuRadial();
+        goToSnap2('14');
+    });
+    document.getElementById('cercle7').addEventListener('click', () => {
+        hideMenuRadial();
+        goToSnap2('15');
+    });
+    document.getElementById('cercle8').addEventListener('click', () => {
+        hideMenuRadial();
+        goToSnap2('16');
+    });
+    document.getElementById('cercle9').addEventListener('click', () => {
+        hideMenuRadial();
+        goToSnap2('17');
+    });
+// Écouteurs d'événements pour les boutons "Retour"
+    document.getElementById('button13').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button14').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button15').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button16').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button17').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button18').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button19').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button20').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+    document.getElementById('button21').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap2('8');
+    });
+// Écouteurs d'événements pour les boutons "Retour"
+    document.getElementById('button23').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button24').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button25').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button26').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button27').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button28').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button29').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button30').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+    document.getElementById('button31').addEventListener('click', () => {
+        showMenuRadial();
+        goToSnap3('18');
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
+
+
 
 // Fonction pour désactiver le défilement vertical sur les snaps 3 à 7
 function disableScrollOnSnaps() {
@@ -243,7 +322,7 @@ function disableScrollOnSnaps() {
 }
 
 function disableScrollOnSnaps2() {
-    // Sélectionne tous les snaps de 3 à 7
+    // Sélectionne tous les snaps de 9 à 17
     const snaps = document.querySelectorAll('#snap9, #snap10, #snap11, #snap12, #snap13, #snap14, #snap15, #snap16, #snap17');
 
     // Ajoute un écouteur d'événements pour chaque snap
@@ -254,6 +333,19 @@ function disableScrollOnSnaps2() {
     });
 }
 
+function disableScrollOnSnaps3() {
+    // Sélectionne tous les snaps de 19 à 27
+    const snaps = document.querySelectorAll('#snap19, #snap20, #snap21, #snap22, #snap23, #snap24, #snap25, #snap26, #snap27');
+
+    // Ajoute un écouteur d'événements pour chaque snap
+    snaps.forEach(function (snap) {
+        snap.addEventListener('wheel', function (e) {
+            e.preventDefault(); // Empêche le défilement vertical
+        });
+    });
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Appelle la fonction pour désactiver le défilement vertical sur les snaps 3 à 7
@@ -261,8 +353,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Appelle la fonction pour désactiver le défilement vertical sur les snaps 9 à 17
     disableScrollOnSnaps2();
+    // Appelle la fonction pour désactiver le défilement vertical sur les snaps 19 à 27
+    disableScrollOnSnaps3()
 });
-
-
-
 
