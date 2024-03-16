@@ -428,6 +428,18 @@ h1 {
 .bloc-maison-gauche {
     margin-left: 30px;
     margin-right: -30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Définir la direction de la colonne */
+    align-items: flex-start; /* Aligner les éléments sur le côté gauche */
+    text-align: left;
+
+}
+.bloc-maison-gauche p{
+    font-size: 15px; /* Taille du texte */
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .bloc-maison-droit {
