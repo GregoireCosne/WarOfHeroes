@@ -6,9 +6,23 @@ body, html {
     color: white; /* Texte en blanc */
 }
 
+@font-face {
+    font-family: 'Game of Thrones'; /* Nom de la police */
+    src: url('Game of Thrones.ttf') format('truetype');
+    font-weight: normal; /* Poids de la police */
+    font-style: normal; /* Style de la police */
+}
+
+
+.texte-personnalise {
+    font-family: 'Game of Thrones', sans-serif; /* Utilisation de la police personnalisée avec une sauvegarde */
+}
+
+
 .container {
     height: 100vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
 
@@ -84,7 +98,7 @@ body, html {
 .menu button {
     margin: 10px 0; /* Espacement entre les boutons */
     padding: 10px 20px; /* Rembourrage des boutons */
-    font-size: 1em; /* Taille de la police */
+    font-size: 0.8em; /* Taille de la police */
     border: none;
     background-color: #666; /* Couleur de fond des boutons */
     color: white; /* Couleur du texte des boutons */
@@ -612,14 +626,18 @@ h1 {
     height: 600px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
     background-color: #333;
     border-radius: 20px;
-    font-size: 18px; /* Taille du texte */
-    font-weight: bold; /* Poids de la police */
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Définir la direction de la colonne */
+    align-items: flex-start; /* Aligner les éléments sur le côté gauche */
+    text-align: left;
 }
-
+.bloc-gauche p{
+    font-size: 15px; /* Taille du texte */
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .colonnes {
     margin-left: 50px;
     margin-right: 50px;
@@ -631,21 +649,31 @@ h1 {
 
 .bloc-haut{
     width: 500px; /* Ajustez la largeur du bloc gauche selon vos préférences */
-    height: 350px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
+    height: 425px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
     background-color: #333;
     border-radius: 20px;
-    font-size: 18px; /* Taille du texte */
-    font-weight: bold; /* Poids de la police */
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Définir la direction de la colonne */
+    align-items: flex-start; /* Aligner les éléments sur le côté gauche */
+    text-align: left;
+}
+.bold-text {
+    font-weight: bold; /* Appliquer le style gras */
 }
 
+.bloc-haut p{
+    font-size: 15px; /* Taille du texte */
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
 .bloc-bas {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 500px; /* Ajustez la largeur du bloc gauche selon vos préférences */
-    height: 200px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
+    height: 155px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
     background-color: #333;
     border-radius: 20px;
     position: relative;
