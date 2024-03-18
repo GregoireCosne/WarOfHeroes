@@ -13,6 +13,24 @@ body, html {
     font-style: normal; /* Style de la police */
 }
 
+.gif-background {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/youtube-video-gif(3).gif');
+    background-size: cover;
+    background-position: center;
+    z-index: -5; /* Pour placer l'arrière-plan derrière le contenu */
+}
+.fullscreen-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .texte-personnalise {
     font-family: 'Game of Thrones', sans-serif; /* Utilisation de la police personnalisée avec une sauvegarde */
@@ -32,7 +50,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black; /* Fond noir */
     position: relative; /* Position relative pour superposer le texte */
     overflow-y: auto;
 }
@@ -337,7 +354,7 @@ h1 {
 }
 
 #cercle-central {
-    background-image: url('trone-fer-marc-uai-600x337.jpg'); /* Chemin vers votre image */
+    background-image: url('../image/trone-fer-marc-uai-600x337.jpg'); /* Chemin vers votre image */
 }
 
 .cercles {
@@ -363,39 +380,39 @@ h1 {
 
 
 #cercle1 {
-    background-image: url('Blason-arryn-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-arryn-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle2 {
-    background-image: url('Blason-baratheon-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-baratheon-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle3 {
-    background-image: url('Blason-greyjoy-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-greyjoy-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle4 {
-    background-image: url('Blason-lannister-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-lannister-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle5 {
-    background-image: url('Blason-martell-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-martell-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle6 {
-    background-image: url('Blason-stark-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-stark-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle7 {
-    background-image: url('Blason-targaryen-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-targaryen-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle8 {
-    background-image: url('Blason-tully-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-tully-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 #cercle9 {
-    background-image: url('Blason-tyrell-2014-v01-256px.png'); /* Chemin vers votre image */
+    background-image: url('../image/Blason-tyrell-2014-v01-256px.png'); /* Chemin vers votre image */
 }
 
 .cercle:nth-child(1) { transform: rotate(40deg) translate(230px) rotate(-40deg) translate(-50%, -50%); }
@@ -513,27 +530,27 @@ h1 {
 
 #bloc1 {
     background-size: 170%; /* Ajuste la taille de l'image */
-    background-image: url('Jon_Snow.webp'); /* Chemin vers votre image */
+    background-image: url('../image/Jon_Snow.webp'); /* Chemin vers votre image */
 }
 
 #bloc2 {
     background-size: 170%; /* Ajuste la taille de l'image */
-    background-image: url('Cersei_Lannister.webp'); /* Chemin vers votre image */
+    background-image: url('../image/Cersei_Lannister.webp'); /* Chemin vers votre image */
 }
 
 #bloc3 {
     background-size: 170%; /* Ajuste la taille de l'image */
-    background-image: url('Tyrion_Lannister.webp'); /* Chemin vers votre image */
+    background-image: url('../image/Tyrion_Lannister.webp'); /* Chemin vers votre image */
 }
 
 #bloc4 {
     background-size: 170%; /* Ajuste la taille de l'image */
-    background-image: url('Daenerys_Season_8.webp'); /* Chemin vers votre image */
+    background-image: url('../image/Daenerys_Season_8.webp'); /* Chemin vers votre image */
 }
 
 #bloc5 {
     background-size: 170%; /* Ajuste la taille de l'image */
-    background-image: url('s-l1200.jpg'); /* Chemin vers votre image */
+    background-image: url('../image/s-l1200.jpg'); /* Chemin vers votre image */
 }
 
 .bloc::before,
@@ -655,7 +672,6 @@ h1 {
     margin-right: 50px;
     width: 500px; /* Ajustez la largeur du bloc gauche selon vos préférences */
     height: 600px; /* Ajustez la hauteur du bloc gauche selon vos préférences */
-    background-color: #000000;
     border-radius: 20px;
 }
 
