@@ -19,3 +19,23 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+
+const form = document.querySelector('#login-form');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = form['email'].value;
+    const password = form['password'].value;
+
+    try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        console.log('User logged in:', user);
+        // Rediriger l'utilisateur vers une autre page ou effectuer d'autres actions après la connexion réussie
+    } catch (error) {
+        console.error('Error signing in:', error);
+        // Gérer les erreurs d'authentification, par exemple, afficher un message d'erreur à l'utilisateur
+    }
+});
